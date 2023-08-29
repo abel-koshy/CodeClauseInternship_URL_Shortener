@@ -1,0 +1,82 @@
+html {
+    background: linear-gradient(to top, black, white);
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.selector {
+    align-items: center;
+}
+
+section {
+
+    border: 5px solid;
+    border-color: black;
+    background-color: lightgray;
+    margin: auto;
+    height: fit-content;
+    width: 400px;
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+form {
+    align-content: center;
+    text-align: center;
+    width: 400px;
+}
+
+.subbut {
+
+    margin-top: 20px;
+    width: 56px;
+    height: 25px;
+
+
+}
+
+.hidden {
+    display: none;
+    margin-top: 20px;
+}
+
+.selectbox {
+    width: 25px;
+}
+
+
+.urlhtml {
+    width: 300px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.heading {
+    text-align: center;
+    align-content: center;
+}
+
+.selector {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.num {
+    width: 40px;
+}
+
+.rad {
+
+    margin-top: 15px;
+    margin-left: 60px;
+
+}

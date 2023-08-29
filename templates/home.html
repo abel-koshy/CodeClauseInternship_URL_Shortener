@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>THE URL SHORTENER</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+<body>
+    <h1 class="heading" >WELCOME TO THE URL SHORTENER</h1>
+    <section class="parentsec">
+               
+            <form method="POST">
+                
+                <input class="urlhtml" type="text" name="urlhtml" style="width: 300px;" id="urlhtml" placeholder="Enter the URL" required>
+                <br>
+                <div class="heading">
+
+                <input type="radio" name="choice" value="div1" required> Set a time limit<br>
+                <input type="radio" name="choice" value="div2" required> Set access limit<br>
+                <input type="radio" name="choice" value="div3" required>No Limit<br>
+
+                </div class="heading">
+              
+                   
+                   <div  id="div1" class="hidden">
+                    <input type="number" id="tlh" class="selectbox" step="1" min="0" max="99" value="0" name="tlh">
+                    <input type="number" id="tlm" class="selectbox" step="1" min="0" max="59" value="0" name="tlm">
+                    <input type="number" id="tls" class="selectbox" step="1" min="0" max="59" value="0" name="tls">
+                   </div>
+            
+                <div id="div2" class="hidden">
+                    <input type="number" id="al"   step="1" value='1' min='0'   class="selectbox"  name="al">
+                </div>
+           
+                
+                <div>
+                    <button class='subbut' type="submit"> submit </button>
+                </div>
+            </form>
+    </section>
+
+<script>
+    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    const divs = document.querySelectorAll('.hidden');
+
+    radioButtons.forEach(radio => {
+        radio.addEventListener('change', function () {
+            divs.forEach(div => {
+                div.style.display = 'none';
+            });
+
+            const selectedDivId = this.value;
+            console.log(selectedDivId);
+            const selectedDiv = document.getElementById(selectedDivId);
+            selectedDiv.style.display = 'block';
+        });
+    });
+</script>
+</body>
+</html>
