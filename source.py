@@ -3,7 +3,6 @@ import requests
 import random
 import string
 import sqlite3
-from datetime import timezone
 import time
 
 
@@ -15,6 +14,9 @@ def checker(lurl):     #function to check if the url entered is a valid url
                   return True  
             except requests.exceptions.RequestException as e:
                   return False
+
+
+
 
 @app.route('/', methods=["GET","POST"])
 def home():
@@ -53,6 +55,10 @@ def home():
             else:
                   return(render_template("invalid.html"))
             
+
+
+
+
 
 @app.route('/<string:shortcode>') 
 def red(shortcode):    
